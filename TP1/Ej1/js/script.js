@@ -5,6 +5,7 @@ var matrix = [];
 for(let i = 0; i < cols; i++) {
     matrix[i] = [];
     for (let j = 0; j < rows; j++) {
+        // un comentario
         matrix[i][j] = Math.random() * 100;        
     }    
 }
