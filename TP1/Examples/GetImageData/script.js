@@ -7,7 +7,7 @@ image.crossOrigin = 'Anonymous';
 //image.src = 'https://i.imgur.com/lmy09aF.jpeg';
 
 // Para cargar imagen de disco, se puede usar la extension Live Server, en gh-pages funciona
-image.src = 'lmy09aF.jpeg';
+image.src = '../Images/lmy09aF.jpeg';
 
 image.onload = function () {
     let context = canvas.getContext('2d');
