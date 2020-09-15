@@ -9,6 +9,12 @@ class Rect extends Figure {
     draw() {
         super.draw();
         this.context.fillRect(this.posX, this.posY, this.width, this.height);
+
+        if (this.highlighted === true) {
+            this.context.strokeStyle = this.highlightedStyle;
+            this.context.lineWidth = 5;
+            this.context.strokeRect(this.posX, this.posY, this.width, this.height);
+        }
     }
 
     getWidth() {
