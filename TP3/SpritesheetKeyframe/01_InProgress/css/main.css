@@ -8,16 +8,9 @@ html, body {
     height: 156px;
     margin: auto;    
     background: url(../img/bernard-sprite.png) repeat-x;
-    animation: walk 1.6s infinite;
     /* Posicionamos el personaje sobre el camino de madera */
     position: relative;
     bottom: 34px;
-}
-
-@keyframes walk {
-    0% { background-position: 0 }
-    
-    100% { background-position: -672px }
 }
 
 #sky {
