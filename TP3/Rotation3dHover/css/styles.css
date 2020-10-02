@@ -21,7 +21,7 @@ body {
 }
 
 img {
-  transform: scale(0.8);    
+  transform: scale(0.8) translate3d(0,0,-100px);  
   object-fit: cover;
   height: 100%;
   width: 100%;
