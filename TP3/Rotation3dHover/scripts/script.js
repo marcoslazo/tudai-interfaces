@@ -1,22 +1,17 @@
-const container = document.getElementById("container");
 const img = document.querySelector("img");
 
-container.addEventListener("mousemove", (e) => {
-    const x = e.layerX - e.target.offsetLeft;
-    const y = e.layerY - e.target.offsetTop;
+window.addEventListener("mousemove", (e) => {
+    const x = e.pageX;
+    const y = e.pageY;
 
-    if (e.target.width == undefined) {
-        return;
-    }
+    let width = window.innerWidth;    
+    let height = window.innerHeight;
 
     const maxYAngle = 20;
-    const maxXAngle = maxYAngle * (e.target.height / e.target.width);
+    const maxXAngle = maxYAngle * height / width;
 
-    const horizontalFactor = maxXAngle * (x - e.target.width / 2) / e.target.width;
-    const verticalFactor = -maxYAngle * (y - e.target.height / 2) / e.target.height;
+    const horizontalFactor = maxXAngle * (x - width / 2) / width;
+    const verticalFactor = -maxYAngle * (y - height / 2) / height;
 
-    console.log(x + " " + y);
-    console.log(horizontalFactor);
-
-    img.style.transform = `rotateY(${horizontalFactor}deg) rotateX(${verticalFactor}deg)`;
+    img.style.transform = `scale(0.8) rotateY(${horizontalFactor}deg) rotateX(${verticalFactor}deg)`;
 });
