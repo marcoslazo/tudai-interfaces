@@ -49,7 +49,8 @@ function redraw() {
     ctx.lineWidth = 6;
     
     //draw Hours		
-    let angle = (now.getHours() / 60) * 2 * Math.PI - Math.PI / 2;
+    let hours = now.getHours() % 12;
+    let angle = (hours / 12) * 2 * Math.PI - Math.PI / 2;
     let px = centerX + Math.cos(angle) * lengthArrowHours;
     let py = centerY + Math.sin(angle) * lengthArrowHours;
     ctx.moveTo(centerX, centerY);

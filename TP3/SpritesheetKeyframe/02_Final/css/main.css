@@ -8,7 +8,7 @@ html, body {
     height: 156px;
     margin: auto;    
     background: url(../img/bernard-sprite.png) repeat-x;
-    animation: walk 1.6s steps(6) infinite;
+    animation: walk 2s steps(6) infinite;
     /* Posicionamos el personaje sobre el camino de madera */
     position: relative;
     bottom: 34px;
